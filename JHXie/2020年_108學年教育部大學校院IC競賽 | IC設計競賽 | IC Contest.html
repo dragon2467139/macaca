@@ -1,0 +1,384 @@
+<!--
+vision : 2016.1.0
+Author: Meng-Yuan Huang (myh@live.com)
+        Chao-Yang Chang (97sunrise@vlsi.ee.ccu.edu.tw)
+        Hao-Cheng Tsai  (ilikeff2002@gmail.com)
+		Chih-Hao Wang   (chwang.peter@gmail.com)
+		Yuan-Cheng Lin  (cso096188@gmail.com)
+revise : 2019/02/14 by CH-Wang
+-->
+<html style="overflow-y: scroll;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head><body>﻿
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/StyleSheet.css">
+<title>2020年/108學年教育部大學校院IC競賽 | IC設計競賽 | IC Contest</title>
+<meta name="Keywords" content="2020IC競賽,108學年IC競賽,IC設計競賽,IC競賽,IC,設計競賽,IC Design Contest">
+<meta name="Description" content="">
+<meta property="og:title" content="2020教育部大學校院積體電路設計競賽">
+<meta property="og:url" content="http://icdc.ee.nsysu.edu.tw/2020/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="http://icdc.ee.nsysu.edu.tw/2020/images/fbShardLink3.png">
+<meta property="og:description" content="報名截止日期：03月15日23:59PM">
+<script src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/all.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/all_002.js"></script><script type="text/javascript" charset="utf-8" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/jquery-1.js"></script>
+
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1531497207166338";
+/*  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=183369375111798";*/
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="width:100%;position:fixed;top:0px;left:0px;z-index:5;background:#FFFFFF">
+    <table style="border-collapse:collapse;margin-left:auto;margin-right:auto">
+        <tbody><tr>
+            <!--
+vision : 2015.1.0
+Author: Meng-Yuan Huang (myh@live.com)
+        Chao-Yang Chang (97sunrise@vlsi.ee.ccu.edu.tw)
+revise : 2014/12/19 by CY-Chang
+-->
+
+<script type="text/javascript" charset="utf-8">
+
+</script>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=News" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/News.jpg" alt="News" <="" a="">
+</a></td>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Intro" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/Intro.jpg" alt="Intro" <="" a="">
+</a></td>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Schedule" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/Schedule.jpg" alt="Schedule" <="" a="">
+</a></td>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=ContestRules" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/ContestRules.jpg" alt="ContestRules" <="" a="">
+</a></td>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Register" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/Register.jpg" alt="Register" <="" a="">
+</a></td>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=OldExams" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/OldExams.jpg" alt="OldExams" <="" a="">
+</a></td>
+<td class="tdNoBorder" style="margin:0;border-spacing:0">
+    <a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=ContactUs" class="funItem">
+        <img class="imgButton" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/ContactUs.jpg" alt="ContactUs" <="" a="">
+</a></td>
+        </tr>
+    </tbody></table>
+</div>
+<div style="height:35px;"></div>
+<table class="tabCenter">
+    <tbody><tr>
+        <!--<td class="mainFrameTd" style="width:320px">
+            <a class="funItem" href='http://icdc.ee.nsysu.edu.tw/2020/'>
+                <img src="images/logo.png" style="height:142px" alt="">
+            </a> 
+        </td>-->
+        <td class="mainFrameTd" colspan="2">
+            <a class="funItem" href="http://icdc.ee.nsysu.edu.tw/2020/index.php">
+                <img style="width: 1300px" src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/2020_bar.png" alt="">
+            </a>
+        </td>
+    </tr>
+    <tr class="tdNoBorder">
+        <td class="mainFrameTd">
+               <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="25, 60, 300, 105" href="http://www.edu.tw/" shape="rect" target="_blank">
+           <area alt="" coords="25, 115, 300, 160" href="https://www.ticd.org.tw/" shape="rect" target="_blank">
+		   
+           <area alt="" coords="25, 210, 300, 255" href="http://www.nsysu.edu.tw/" shape="rect" target="_blank">
+            <area alt="" coords="25, 260, 300, 310" href="http://web.ee.nsysu.edu.tw/?Lang=zh-tw" shape="rect" target="_blank">
+			<area alt="" coords="25, 320, 300, 370" href="http://cse.nsysu.edu.tw/" shape="rect" target="_blank">
+			
+              <area alt="" coords="25, 415, 300, 460" href="https://www.tsri.org.tw/" shape="rect" target="_blank">
+            <area alt="" coords=" 25, 475, 300, 520" href="http://www.ieee.org/index.html?WT.mc_id=hpf_logo" shape="rect" target="_blank">
+        <!--     <area alt="" coords="25, 535, 300, 580" href="https://www.itri.org.tw/" shape="rect" target="_blank">  -->
+			 
+            <area alt="" coords="25, 570, 300, 610" href="http://www.synopsys.com/" shape="rect" target="_blank">
+			<area alt="" coords="25, 625, 300, 675" href="https://www.cadence.com/content/cadence-www/global/zh_TW/home/company/system-design-enablement.html" shape="rect" target="_blank">
+            <area alt="" coords="25, 690, 300, 740" href="https://www.himax.com.tw/zh/company/about-himax/" shape="rect" target="_blank">
+            <area alt="" coords="25, 750, 300, 800" href="https://www.mediatek.tw/" shape="rect" target="_blank">
+
+		<!--	<area alt="" coords="25, 750, 300, 800" href="https://tw.micron.com/in-taiwan" shape="rect" target="_blank">  -->
+			
+
+<!--
+//            <area alt="" coords="25, 575, 300, 620" href="http://www.ilitek.com/" shape="rect" target="_blank">
+
+//           <!-- <area alt="" coords="101, 268, 224, 289" href="http://www.mediatek.com" shape="rect" target="_blank">
+//            <area alt="" coords="100, 250, 222, 268" href="http://www.digiwell.com.tw" shape="rect" target="_blank">
+//            <area alt="" coords="95, 232, 233, 250" href="http://www.mstarsemi.com" shape="rect" target="_blank">
+//            <area alt="" coords="101, 174, 243, 196" href="http://itri.org.tw/" shape="rect" target="_blank">
+//            <area coords="101, 214, 218, 231" href="http://www.faraday-tech.com/tw/" shape="rect" target="_blank">
+//        	<area alt="" coords="100, 35, 304, 64" href="http://www.ticd.org.tw/" shape="rect" target="_blank">
+//        	<area alt="" coords="103, 195, 227, 214" href="http://tw.richtek.com/" shape="rect" target="_blank">
+        </map>
+-->
+        <img src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/2020_sponsors_newV2.jpg" class="funItem" style="width:320px" width:="" 85%;="" usemap="#ImgMap0" alt="">
+        <br>
+        <div style="background-color: white" class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/iccontest2020/" data-width="292" data-height="500" data-show-faces="true" data-stream="false" data-header="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1531497207166338&amp;container_width=320&amp;header=true&amp;height=500&amp;href=https%3A%2F%2Fwww.facebook.com%2Ficcontest2020%2F&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=292"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f3a8ef62caf7882" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none; visibility: visible; width: 0px; height: 0px;" src="https://web.facebook.com/plugins/like_box.php?app_id=1531497207166338&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df336862a90b6a48%26domain%3Dicdc.ee.nsysu.edu.tw%26origin%3Dhttp%253A%252F%252Ficdc.ee.nsysu.edu.tw%252Ff1036b45578ae34%26relation%3Dparent.parent&amp;container_width=320&amp;header=true&amp;height=500&amp;href=https%3A%2F%2Fwww.facebook.com%2Ficcontest2020%2F&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=292" class="" width="292px" height="500px" frameborder="0"></iframe></span></div>
+        </map></td>
+        <td class="mainFrameTd">
+            <div id="contents">
+                <!--
+vision : 2016.1.0
+Author: Meng-Yuan Huang (myh@live.com)
+        Chao-Yang Chang (97sunrise@vlsi.ee.ccu.edu.tw)
+        Hao-Cheng Tsai  (ilikeff2002@gmail.com)
+revise : 2015/12/14 by HC Tsai
+-->
+
+﻿<style type="text/css">
+.awardTd {
+    text-align:justify;
+}
+</style>
+    <div class="pageHead"></div>
+    <div class="pageMid">
+    <div class="pageMidTab" style="text-align:justify">
+        <ol>           
+            
+             <p class="artHead"><b style="color:red">【更新】</b>[2020/08/07]</p>
+                <ol>大家好!</ol>
+
+                <ol>台灣半導體研究中心(TSRI)舉辦之IC設計能力鑑定考試提供IC競賽完成決賽的同學報名費優惠，109年的考試日期及報名日期如下。</ol>
+                <ol>報名時間：109年8月3日～8月21日</ol>
+                <ol>考試日期：109年9月12日</ol>
+                <ol>鑑定考試網址：<a style="color:blue" href="https://www.tsri.org.tw/icdesign">https://www.tsri.org.tw/icdesign</a></ol>
+                <ol>聯絡電話：03-5773693#7637</ol>
+                <ol>Email：icdesign@narlabs.org.tw</ol>
+                <ol>活動海報及詳細的獎勵辦法詳如下:</ol>
+                <ol>活動海報: <a style="color:blue" href="https://drive.google.com/file/d/1PNOAE5hM1B7j_1rmHiPDVKiC6AmdZiuS/view?usp=sharing">https://drive.google.com/file/d/1PNOAE5hM1B7j_1rmHiPDVKiC6AmdZiuS/view?usp=sharing</a></ol>
+                <ol>獎勵辦法: <a style="color:blue" href="https://drive.google.com/file/d/1BU8qNySIWzoG8HFC-UIuMTZvF6ZoMNFd/view?usp=sharing">https://drive.google.com/file/d/1BU8qNySIWzoG8HFC-UIuMTZvF6ZoMNFd/view?usp=sharing</a></ol>
+                
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+             <p class="artHead">[2020/07/17]</p>
+                <ol>大家好!</ol>
+
+                <ol>108學年度IC設計競賽決賽得獎名單已經出爐囉。</ol>
+                <ol>在此恭喜所有的得獎者，也希望明年的IC設計競賽大家能夠多多報名，不斷的精進和挑戰自己的能力吧!</ol>
+                <ol>請各位到此<a style="color:blue" href="https://drive.google.com/file/d/1z7FhBL25_hf6lKeYdaj3QHSWFTFyRyZ8/view?usp=sharing"> 連結 </a>查看決賽得獎名單</ol>
+                
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+             
+             <p class="artHead">[2020/07/06]</p>
+                <ol>大家好!</ol>
+
+                <ol>108學年度大學校院積體電路(IC)設計競賽決賽成績已公佈，</ol>
+                <ol>請各位參賽者前往報名網站做查詢 (進入報名系統點選" <a href="https://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Login&amp;func=web/final/FinalScoreCheck">查詢決賽成績</a> ")。</ol>
+                <ol>若要申請成績複查的同學請填寫複查申請單，並於<b style="color:red">7/8(三) 17:00前</b>寄信至官方信箱，</ol>
+                <ol>其他繳交方式(如Facebook、電話聯絡)皆不予受理</ol>
+                
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+                
+             <p class="artHead">[2020/05/26]</p>
+                <ol>大家好!</ol>
+
+                <ol>以下連結為IC設計競賽決賽成功報名名單，</ol>
+                <ol>再麻煩各組確認是否有問題，</ol>
+                <ol>若有問題請在<b style="color:blue">週四(5/28)</b>前與我們聯繫，謝謝。</ol>
+                <ol><a style="color:blue" href="https://drive.google.com/file/d/1yHVHptDNn8HI1nMOymY0bUD-s0gjcrRc/view?fbclid=IwAR0xrHaLfHqBicctbYInmeGRY3ulgGS5YV8a4OiyBPgzSct7v3Sj51Bow1E">https://drive.google.com/open…</a></ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/05/22]</p>
+                <ol>大家好!</ol>
+
+                <ol>請各位入圍決賽的參賽同學們再次確認自己的信箱是否有收到官網所寄送的<b style="color:red">決賽方式異動通知</b></ol>
+                <ol>若沒有請盡快聯繫我們，謝謝。</ol>
+                <ol>也請各位入圍決賽的參賽者務必到 <a style="color:blue" href="https://icdc.ee.nsysu.edu.tw/2020/index2.php?page=RegFun">報名頁面</a> 填寫決賽資料</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/05/18]</p>
+                <ol>大家好!</ol>
+
+                <ol>請各位入圍決賽的參賽同學們確認自己的信箱是否有收到官網所寄送的決賽通知</ol>
+                <ol>若沒有請盡快聯繫我們，謝謝。</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/04/20]</p>
+                <ol>大家好!</ol>
+                <ol>108學年度大學校院積體電路(IC)設計競賽決賽名單已經出爐囉！</ol>
+                <ol>各位參賽者可以前往以下連結確認各組別進入決賽的名單</ol>
+                <br>
+                <ol>A組-全客戶設計(研究所類)：</ol>
+                <ol><a style="color:blue" href="https://drive.google.com/open?id=1VTWjhn1LGHVbX5JIfO1tJTbiHAK97p8M">https://drive.google.com/open?id=1VTWjhn1LGHVbX5JIfO1tJTbiHAK97p8M</a></ol>
+                <br>
+                <ol>B組-標準元件數位電路設計(研究所類)：</ol>
+                <ol><a style="color:blue" href="https://drive.google.com/open?id=105IN5TakpIPWxfibqY8NBgNJv2rh2uVz">https://drive.google.com/open?id=105IN5TakpIPWxfibqY8NBgNJv2rh2uVz</a></ol>
+                <br>
+                <ol>C組-類比電路設計(大學/研究所類)：</ol>
+                <ol><a style="color:blue" href="https://drive.google.com/open?id=1IRGUP6mWJYDertRT4K3KJGjyNSbVnnbX">https://drive.google.com/open?id=1IRGUP6mWJYDertRT4K3KJGjyNSbVnnbX</a></ol>
+                <br>
+                <ol>D組-全客戶設計(大學類)：</ol>
+                <ol><a style="color:blue" href="https://drive.google.com/open?id=1b0bwxoag7ygW6WYjKSBf-EqjLVS2M2W8">https://drive.google.com/open?id=1b0bwxoag7ygW6WYjKSBf-EqjLVS2M2W8</a></ol>
+                <br>
+                <ol>E組-標準元件數位電路設計(大學類)：</ol>
+                <ol><a style="color:blue" href="https://drive.google.com/open?id=1KQJrABxfDsE_7dQ82p0aEZQOkFv9oaSL">https://drive.google.com/open?id=1KQJrABxfDsE_7dQ82p0aEZQOkFv9oaSL</a></ol>
+                <br>
+                <ol>若要申請複查請至報名網頁下載相關文件做申請：</ol>
+                <ol><a style="color:blue" href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Register">http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Register</a></ol>
+                <br>
+                <ol>複查申請截止日期為<b style="color:red">4/23(四)PM5:00止</b></ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/04/15]</p>
+                <ol>大家好!</ol>
+                <ol>先前有提到 Cadence Academic Network免費為本次參加IC設計競賽的同學提供實用的Cadence線上課程，</ol>
+                <ol>而 Cadence也有提供完課證照，這也代表著你將得到Cadence的認證。</ol>
+                <ol>Cadence的認證不僅表示你使用Cadence軟體打下穩固的基礎，</ol>
+                <ol>也代表你驗證的專業知識、在此領域中的專業認證，更能為履歷增添色彩，增加就業機會。</ol>
+                <ol>詳情請參考以下網址及海報: <a style="color:blue" href="https://www.cadence.com/en_US/home/training/become-cadence-certified.html#faq">https://www.cadence.com/en_US/home/training/become-cadence-certified.html#faq</a></ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+                <ol><a href="https://www.cadence.com/en_US/home/training/become-cadence-certified.html#faq"><img src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/Cadence_image.png"></a></ol>
+            
+            <p class="artHead">[2020/04/01]</p>
+                <ol>大家好!</ol>
+                <ol>因應COVID-19疫情影響</ol>
+                <ol>經討論，2020 IC設計競賽決賽日期將延期至 <a style="color:red">6/3(三)~6/5(五)</a>。</ol>
+                <ol>競賽決賽日期皆依IC設計競賽官網競賽時程公告為主</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+                <ol><a href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Register"><img src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/0720.jpg"></a></ol>
+            
+            <p class="artHead">[2020/03/24]</p>
+                <ol>大家好!</ol>
+                <ol>提醒各位，初賽有個需要注意完成的事項</ol>
+                <ol>請各小組在完成初賽題目後，除了將完成結果上傳至FTP外，也請大家以<b style="color:red">組</b>為單位完成下方的google表單</ol>
+                <ol>填寫自己所使用的EDA tools，<b style="color:red">必須完成此表單的填寫才算完成競賽</b>，預祝各位比賽順利。</ol>
+                <ol>表單網址: <a style="color:blue" href="https://forms.gle/iskKyQmY9Tn5jts6A">https://forms.gle/iskKyQmY9Tn5jts6A</a></ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/03/21]</p>
+                <ol>大家好!</ol>
+
+                <ol>2020 IC設計競賽的" <b>參賽手冊</b> "以及" <b>參賽隊伍名單</b> "已經更新至競賽網頁上了</ol>
+                <ol>大家可以前往競賽網頁的" <a style="color:blue" href="http://icdc.ee.nsysu.edu.tw/2020/index2.php?page=Register">競賽報名</a> "區參閱</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/03/09]</p>
+                <ol>大家好!</ol>
+
+                <ol>因應COVID-19疫情影響開學時間</ol>
+                <ol>經討論，2020年<b><span style="color:red">奇景盃IC佈局競賽</span></b>日期將延後如下:</ol>
+                <ol>初賽報名截止時間延期至 <span style="color:red">4月10日</span></ol>
+                <ol>初賽日期延期至 <span style="color:red">4月15日</span></ol>
+                <ol>研習營延期至 <span style="color:red">5月22日</span></ol>
+                <ol>決賽日期延期至 <span style="color:red">5月23日</span></ol>
+                <ol>所有競賽日期皆依奇景盃官網 <a href="http://himax.yuntech.edu.tw/HC_schedule.php" style="color:blue">賽程公告</a> 為主</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+                <ol><a href="http://himax.yuntech.edu.tw/"><img src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/image001_v2.jpg" alt=""></a></ol>
+                
+                
+            
+            <p class="artHead">[2020/03/02]</p>
+                <ol>各位參賽同學好，</ol>
+
+                <ol>Cadence Academic 
+Network免費為本次參加IC設計競賽的同學提供實用的Cadence線上課程，幫助同學們更便捷地瞭解與學習Cadence工具。
+                其中課程包含PCB Design and Analysis; Custom IC, Analog, and RF
+ Design; Digital Design and Signoff; System Design and Analysis; IC 
+Package Design and Analysis等，
+                歡迎同學們自行選讀。</ol>
+                <ol>有興趣的同學請再填寫以下申請表格後回傳至universityprogram@cadence.com ，謝謝。</ol>
+                <br>
+                <ol>申請表格:  <a href="http://icdc.ee.nsysu.edu.tw/2020/Doc/2020-Request%20Form-Online%20Training.pdf">2020-Request Form-Online Training.pdf </a> </ol>
+                <ol>課程詳細列表請點擊此 <a href="https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/training/master-learning-maps.pdf" style="color:blue">連結</a> 查看</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+                
+            <p class="artHead">[2020/02/26]</p>
+                <ol>大家好!</ol>
+
+                <ol>因應COVID-19疫情影響開學時間，已將<b><span style="color:red">初賽時間由3/18延後至3/25，初賽報名時間也從3/8延後至3/15</span></b>，</ol>
+                <ol><b><span style="color:red">決賽時間也由4/28(二)~4/30(四)更改為5/6(三)~5/8(五)</span></b>，歡迎大家踴躍報名，</ol>
+                <ol>後續會再觀察COVID-19疫情發展另行公佈是否調整決賽時間。</ol>
+                <ol>謝謝大家!</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            
+                
+            <p class="artHead">[2020/01/31]
+            </p>
+                <ol>大家好!</ol>
+
+                <ol>2020 IC設計競賽將在2/10號開始報名了~</ol>
+                <ol>詳情請參考官方網站的競賽介紹，</ol>
+                <ol>謝謝大家!並且到時候記得來報名！</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+            
+            <p class="artHead">[2020/01/31]
+            </p>
+                <ol>各位同學您好:</ol>
+
+                <ol>由奇景光電公司所主辦的第十六屆奇景盃IC佈局設計競賽</ol>
+                <ol>即日起開始接受報名至2020/4/6 (Mon.)截止</ol>
+                <ol>競賽共分大學組與碩士組競賽</ol>
+                <ol>(報名官方網址：<a href="http://himax.yuntech.edu.tw/" target="_blank">http://himax.yuntech.edu.tw/</a>)</ol>
+
+                <ol>初賽日期時間為2020/4/8 (Wed.) AM9:00 ~ PM 9:00於各校實驗室舉行</ol>
+                <ol>決賽日期時間為2020/5/16 (Sat.) AM9:00 ~ PM 6:00地點為雲林科技大學電子系/電機系</ol>
+
+                <ol>大學組可由一或兩位同學組隊，碩士組則限定為一人</ol>
+                <ol>報名完成後可以下載競賽歷屆試題、相關文件與製程檔案</ol>
+                <ol>競賽相關詳細資訊，請參閱報名官方網址說明</ol>
+
+                <ol>競賽與報名相關問題可與承辦單位逕行聯繫</ol>
+                <ol>電話：05-5342601 #4266</ol>
+                <ol>信箱：m10712041@yuntech.edu.tw</ol>
+
+                <ol>歡迎您組隊報名參加!!</ol>
+
+                <ol>競賽承辦人</ol>
+
+                <ol>雲科電機系: 黃崇禧老師/雲科電子系: 楊博惠老師</ol>
+                <br>
+                <ol>國立中山大學 IC設計競賽小組 敬上</ol>
+                <ol><a href="http://himax.yuntech.edu.tw/"><img src="2020%E5%B9%B4_108%E5%AD%B8%E5%B9%B4%E6%95%99%E8%82%B2%E9%83%A8%E5%A4%A7%E5%AD%B8%E6%A0%A1%E9%99%A2IC%E7%AB%B6%E8%B3%BD%20|%20IC%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%20|%20IC%20Contest_files/image001.jpg" alt=""></a></ol>
+
+		</ol>
+
+    </div>
+    </div>
+    <div class="pageTail"></div>
+
+                聯絡網站管理者: icdesigncontest@gmail.com            </div>
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+</body></html>

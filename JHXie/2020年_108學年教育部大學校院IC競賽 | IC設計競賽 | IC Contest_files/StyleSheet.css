@@ -1,0 +1,171 @@
+﻿* {
+	font-size: 12pt;
+	font-family: "Times New Roman";
+	color: black;
+}
+
+.artHead {
+    font-weight:bold;
+}
+
+/* For function items. Begin */
+.imgButton {
+    width: 175px;
+    height: 55px;
+}
+
+img {
+    border: 0;
+}
+
+.funItem {
+    text-decoration:none;
+}
+
+.funItem:hover {
+    background:none;
+}
+
+.preloadImg {
+    display:none;
+}
+
+/* For function items. End */
+
+.mainFrameTd {
+     vertical-align:top;
+}
+
+body {
+    text-align:center;
+}
+
+.TableStyle {
+	border: 1px black solid;
+	text-align: center;
+}
+
+.TextInput {
+	border: thin solid;
+	text-align: left;
+	font-weight: normal;
+}
+
+input:hover {
+	background:#FF0000;
+}
+
+a {
+	word-wrap: break-word;
+}
+
+a:hover {
+	background:#FF0000;
+}
+
+.linkButton {
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+input:focus {
+	background-color:#66FF33;
+}
+
+.noHoverBg:hover {
+    background:inherit;
+}
+
+.Title {
+    text-align: center;
+    font-size: xx-large;
+}
+
+body {
+    text-align:center;
+}
+
+td, .solidBorder {
+    font: inherit;
+    border: 1px black solid;
+    text-align: center;
+    background-position: center;
+}
+
+.tdNoBorder, .mainFrameTd {
+    border: 0px;
+}
+
+.titleImg {
+    height: 30px;
+    margin-top:10px;
+}
+
+.titleText {
+	padding-top: 70px;
+}
+
+.pageHead {
+    background-image: url('images/1st.jpg');
+    background-repeat: no-repeat;
+    height: 89px;
+}
+
+.pageMid {
+    background-image: url('images/2nd.jpg');
+    background-repeat: repeat-y;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.pageMidTab {
+	text-align: center;
+    width: 85%;
+}
+
+.pageTail {
+    background-image: url('images/3rd.jpg');
+    background-repeat: no-repeat;
+    height: 46px;
+}
+
+p {
+	text-align: justify;
+}
+
+#contents, .pageHead, .pageMid, .pageTail, .pageMidTab, .tabCenter {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.pageHead, .pageMid, .pageTail, .contentWidth {
+    width: 1000px;
+}
+
+.pageHead, .pageMid, .pageTail {
+    text-align:center;
+    background-position:center;
+}
+
+.tabTitle {
+	background-color: #FF0080;
+	text-align: center;
+}
+
+.largeItem {
+    font-size: xx-large;
+    color: black;
+}
+
+table {
+    border-collapse:collapse
+}
+
+.olLevel2 {
+    list-style:lower-latin;
+}
+
+﻿/* News styles */
+#tdDate {
+    width: 5em;
+}
