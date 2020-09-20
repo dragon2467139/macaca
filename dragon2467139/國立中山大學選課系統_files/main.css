@@ -1,0 +1,160 @@
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+*/
+
+body {
+	background: #f5f5f5;
+	font-family: Calibri, "微軟正黑體", "新細明體", PMingLiU, sans-serif;
+	font-size: medium;
+}
+
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+input {
+	vertical-align: middle;
+}
+
+.menu {
+	font-family: Calibri, "標楷體", "BiauKai", sans-serif;
+	font-size: x-large;
+//	font-weight: 600;
+}
+
+.text {
+	font-family: Calibri, "微軟正黑體", "新細明體", PMingLiU, sans-serif;
+	font-size: medium;
+//	font-weight: 600;
+}
+
+
+.head {
+	background-color: #ff971d;
+	color: #666;
+	text-align: left;
+	height: 30px;
+	line-height: 30px;
+	padding: 3px 0px 0px 10px;
+}
+
+.head2 {
+	background-color: #cc99ff;
+	color: #0000ff;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	padding: 3px 0px 0px;
+}
+
+.highlight {
+	background-color: #800;
+	color: #eee;
+	text-align: left;
+	height: 30px;
+	line-height: 30px;
+	padding: 3px 0px 0px 10px;
+}
+
+.highlight-link {
+	background-color: #800;
+	color: #eee;
+}
+
+.highlight-link:hover {
+	background-color: #080;
+	color: #eee;
+}
+
+.highlight-link:active {
+	background-color: inherit;
+	color: inherit;
+}
+
+.item {
+	color: #000000;
+	font-size: large;
+//	font-weight: 300;
+	text-align: left;
+	height: 25px;
+	line-height: 25px;
+	padding: 2px 0px 0px 10px;
+}
+
+.menu-link {
+	background-color: inherit;
+}
+
+.menu-link:hover {
+	background-color: #ca3d3d;
+	color: #ffffff;
+}
+
+.menu-link:active {
+	background-color: inherit;
+	color: inherit;
+}
+
+
+
+.button {
+	background-color: #238591;
+	border-radius: 6px;
+	border: 0;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	height: 1.5em;
+	line-height: 1.5em;
+	padding: 1px 10px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.button:hover {
+	background-color: #ca3d3d;
+}
+
+.button:active {
+	background-color: #238591;
+}
+
+.button2L {
+	background-color: #238591;
+	border-radius: 6px;
+	border: 0;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	height: 3em;
+	line-height: 1.5em;
+	padding: 1px 10px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.button2L:hover {
+	background-color: #ca3d3d;
+}
+
+.button2L:active {
+	background-color: #238591;
+}
+
+.text-L {
+	font-size: larger;
+//	font-weight: 600;
+	font-family: inherit;
+}
+
+.text-S {
+	font-size: smaller;
+//	font-weight: 200;
+	font-family: inherit;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://selcrs.nsysu.edu.tw/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+	<title>國立中山大學吱吱盃報名系統</title>
+	
+	<link rel="stylesheet" href="./國立中山大學選課系統_files/main.css">
+
+<script language="JavaScript"><!--
+function please_use_IE9(){
+	alert("本系統僅能使用IE9瀏覽器或更低版本操作。\nThis website can only run in IE9 or below!")
+}
+
+function openwin(mylink){
+	toolwin=window.open(mylink,'toolwin','400','200')
+}
+
+function init_page(mylink){
+	toolwin=window.open(mylink,'toolwin','height=300, width=750, top=50,left=50,toolbar=no, menubar=no, scrollbars=yes')
+}
+
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.stuid.value == "")
+  {
+    alert("學號必須為七位阿拉伯數字 !! 請重新輸入");
+    theForm.stuid.focus();
+    return (false);
+  }
+
+  if ((theForm.stuid.value.length > 10))
+  {
+    alert("帳號必須少於等於10位阿拉伯數字 !! 請重新輸入");
+    theForm.stuid.focus();
+    return (false);
+  }
+
+ 
+
+  var checkOK = "0123456789";
+  var checkStr = theForm.stuid.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 2;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("學號必須為7 或 10 位阿拉伯數字（或英文字母） !! 請重新輸入");
+    theForm.stuid.focus();
+    return (false);
+  }
+
+  if (theForm.SPassword.value == "")
+  {
+    alert("密碼必須為阿拉伯數字（或英文字母） ！請重新輸入");
+    theForm.SPassword.focus();
+    return (false);
+  }
+
+  /*
+  if (theForm.SPassword.value.length > 6)
+  {
+    alert("密碼必須為阿拉伯數字（或英文字母） ！請重新輸入");
+    theForm.SPassword.focus();
+    return (false);
+  }
+*/
+
+  if (theForm.ValidCode.value == "")
+  {
+    alert("驗證碼必須輸入!! \n Validation Code Needed.");
+    return (false);
+  }
+
+  if ((theForm.ValidCode.value.length < 4))
+  {
+    alert("驗證碼需4位阿拉伯數字 !! 請重新輸入 \n 4-digit Validation Code Needed.");
+    return (false);
+  }  
+
+  return (true);
+}
+//--></script></head>
+
+
+               
+<body style="background-color:#f5f5f5">
+<!--
+<div style="text-align:center">
+<span>
+	<img style="vertical-align:bottom" height="105" width="150" src="images/nsysulogo2.gif" border="0">
+	<img style="vertical-align:bottom" height="105" width="600" src="images/
+	selcrs-c.png
+	" border="0">
+</span>
+</div> 
+-->
+
+
+<div>
+<table align="center" valign="top" cellspacing="0" cellpadding="1" style="border-collapse:collapse"><tbody>
+<tr valign="bottom">
+	<td align="center">
+		<img style="vertical-align:bottom" height="105" width="150" src="./國立中山大學選課系統_files/nsysuisclogo.png" border="0">
+	</td>
+	<td>
+		<img style="vertical-align:bottom" height="105" width="600" src="./國立中山大學選課系統_files/selcrs-c.png" border="0">
+	</td>
+</tr>
+
+<tr>
+	<td valign="top" style="background-color:#99ccff;border:1px solid #f5f5f5;">
+	<div style="min-width:150px">
+		<table border="0" cellspacing="0" cellpadding="1"><tbody>
+		<tr><td class="menu highlight highlight-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/smain.asp?eng=1">英文介面<br>(English Version)</a>
+		</span></td></tr>
+		
+		<tr><td class="menu head"><span>
+			目標背景
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/menu1/qrycrsfrm.asp?HIS=1&amp;eng=0" target="w2">》活動背景</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/menu1/qrycrsfrm.asp?HIS=2&amp;eng=0" target="w3">》活動目標</a>
+		</span></td></tr>
+		<!--
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/menu1/qrycrsfrm.asp?HIS=1&amp;eng=0&amp;in_eng=2" target="w2">》提案徵稿</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span><a href="http://ctdr.nsysu.edu.tw/class2.php" target="w9">》黑客松</a></span></td></tr><tr><td class="menu item menu-link"><span><a href="http://ctdr.nsysu.edu.tw/teacher2-7.php" target="w9">》教學優良課程</a></span></td></tr><tr><td class="menu item menu-link"><span><a href="http://ctdr.nsysu.edu.tw/teacher3-7.php" target="w9">》教學傑出及績優教師</a></span></td></tr>
+		-->
+		<tr><td class="menu head"><span>
+			活動規範
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://oaa.nsysu.edu.tw/p/405-1003-20388,c2935.php?Lang=zh-tw" target="w9">》參加條件</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://oaa.nsysu.edu.tw/p/404-1003-157435.php?Lang=zh-tw" target="w1">》使用條款</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://oaa.nsysu.edu.tw/p/412-1003-2935.php?Lang=zh-tw" target="w9">》規範事項</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://oaa.nsysu.edu.tw/p/412-1003-98.php?Lang=zh-tw" target="w9">》用戶註冊</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/%E5%90%84%E7%AF%80%E6%AC%A1%E4%B8%8A%E8%AA%B2%E6%99%82%E9%96%93.pdf" target="w1">》參與討論</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="" target="w9">》系統維護</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="" target="w9">》本規範編寫參考</a>
+		</span></td></tr>
+
+		<tr><td class="menu head"><span>
+			活動說明
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/newstu/stu_new.asp?action=14" target="w3">》提案徵稿</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://sso.nsysu.edu.tw/" target="w3">》提案投票</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="">》黑客松</a>
+		</span></td></tr>
+		
+		<tr><td class="menu head"><span>
+			評選及獎勵方式
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://oaa.nsysu.edu.tw/p/412-1003-3277.php?Lang=zh-tw" target="w9">》評選原則</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/stu_out/STU_OUT.asp?action=1" target="w3">》獎勵方式<br><font size="2">　(未加註之獎項皆於活動後給予)</font></a>
+		</span></td></tr>
+		
+		<tr><td class="menu head"><span>
+			報名專區
+		</span></td></tr>
+
+		<tr><td><span class="text-S">
+			尚未到報名開放時段<br><br>		
+		</span></td></tr>
+		
+		<tr><td class="menu head"><span>
+			聯絡我們
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/menu5/tchpass.asp?eng=0" target="w3">》主辦單位</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="https://selcrs.nsysu.edu.tw/open_crs/" target="w3">》協辦單位</a>
+		</span></td></tr>
+		
+		<tr><td class="menu item menu-link"><span>
+			<a href="">》贊助單位</a>
+		</span></td></tr></tbody></table>
+	</div></td>
+	
+	<td valign="top" style="background-color:#ccccff;border:1px solid #f5f5f5;">
+	<div>
+		<table width="600" border="0" cellspacing="0" cellpadding="1">
+		<tbody><tr><td class="menu head2">
+			<div>報名系統登錄</div>
+		</td></tr>
+		<tr><td align="left" class="text" style="background-color:#ccccff">
+			<div>
+			<form method="POST" action="" onsubmit="return false" name="Studpassform">
+				<div style="margin:5px">
+					　帳號：
+					<input type="text" name="stuid" size="12">
+				</div>
+				
+				<div style="margin:5px">
+					　密碼：
+					<input type="password" name="SPassword" size="12">
+				</div>
+				
+				<div style="margin:5px">
+				<span">
+					　驗證碼：
+					<input type="text" name="ValidCode" size="10">
+					<img id="imgVC" name="imgVC" style="vertical-align:middle" src="./國立中山大學選課系統_files/validcode.asp.下載" onclick="">
+				
+				<span class="button text-S">
+					<a href="" onclick="please_use_IE9()">
+					重新產生
+					</a>
+				</span>
+				</span"></div>
+				
+				<div style="margin:5px"><span>
+				　<input class="button text" type="submit" value="確　定" name="B1" onclick="please_use_IE9()">
+				</span></div>
+			</form>
+			</div>
+			
+			<div><p></p></div>
+			
+			<div class="text-S" style="margin:10px;border-style:double;border-radius:10px;padding:0px 5px">
+			<ul>
+				<li>在您發表評論之後，主辦單位可能會進一步詢問關於您經驗的補充問題，幫助您有效參與討論。</li>
+				<li>我們的版主力求保持中立和客觀，幫助您做出明確和翔實的評論，無論您是支持還是反對行政機關的提案。</li>
+				<li>您可以隨時停止使用本網站，也可以聯繫我們，要求刪除您的用戶名稱。</li>
+				<li>專案團隊可能會更新本頁面以修訂使用條款，並公告在進站訊息裡。</li>
+				<li>如果您繼續使用本站，即表明您同意遵守修訂後的版本。</li>
+				<li>再次感謝您參與 2020 吱吱盃黑客松！</li>
+				<li><b style="color: red;">本系統建議使用IE9瀏覽器操作。</b></li>
+				
+			</ul>
+			</div>
+		</td></tr>
+		
+		<tr><td class="menu head2">
+			<div>系統公告</div>
+		</td></tr>
+		
+		<tr><td valign="top" class="text-S" style="background-color:#ccccff;">
+			<div style="min-height:450px;padding:5px">
+			<table border="0" cellspacing="0" cellpadding="1">
+            <!--newsbegin--><tbody><tr><td colspan="2" align="left"><br>【訊息公告】
+<br><font color="black"><b>1.【校際選課】高雄醫學大學與中山大學109學年度第1學期遠距同步課程(高雄醫學大學課程)<br>
+<font color="blue"><a href="https://oaa.nsysu.edu.tw/p/406-1003-241363,r701.php?Lang=zh-tw">https://oaa.nsysu.edu.tw/p/406-1003-241363,r701.php?Lang=zh-tw </a></font></b><font color="blue"><br>
+
+<br><font color="black"><b>2. 【校際選課】中山大學與高雄醫學大學109學年度第1學期遠距同步課程(中山大學課程)<br>
+<font color="blue"><a href="https://oaa.nsysu.edu.tw/p/406-1003-241871,r701.php?Lang=zh-tw">https://oaa.nsysu.edu.tw/p/406-1003-241871,r701.php?Lang=zh-tw </a></font></b><font color="blue"><br>
+
+<br><font color="black">3.自102學年度第2學期起各大樓教室代碼異動，課表所列教室編號已配合更動，同學上課前，請確認相關教室位置，各大樓教室代碼及位置，請參考<a class="button" href="http://www.nsysu.edu.tw/p/412-1000-1503.php?Lang=zh-tw">本校校區地圖</a><br>
+<br>【注意事項】
+<br><font color="black">(1)各階段選課結果公布於選課系統網頁。<br>
+(2)本校加選課程不採『先選先上』制，同階段完成加選課程之選上機率相同（依優先序配課），同學於時程內完成選課即可。<br>
+(3)本學期僅擬修習必修課程學生請注意，未於選課階段上網確認必修課程者，視同未完成選課，系統預置之必修課程一律刪除。<br><br></font></font></font></font></font></font></td></tr><tr><td colspan="2" align="left" valign="middle"><blockquote style="color:green">一佰零九學年度第一學期選課日程</blockquote></td></tr><tr><td><div style="text-align:right;color:#800000">初選一</div></td><td><div style="min-width:250px;color:#800000">：109.08.13(09:00)&nbsp;~&nbsp;109.08.17(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">初選一公佈</div></td><td><div style="min-width:250px;color:#800000">：109.08.18(14:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">初選二</div></td><td><div style="min-width:250px;color:#800000">：109.08.20(09:00)&nbsp;~&nbsp;109.08.24(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">初選二公佈</div></td><td><div style="min-width:250px;color:#800000">：109.08.25(14:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">加退選一</div></td><td><div style="min-width:250px;color:#800000">：109.09.10(09:00)&nbsp;~&nbsp;109.09.11(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">加退選一公佈</div></td><td><div style="min-width:250px;color:#800000">：109.09.14(14:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">加退選二</div></td><td><div style="min-width:250px;color:#800000">：109.09.16(09:00)&nbsp;~&nbsp;109.09.17(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">加退選二公佈</div></td><td><div style="min-width:250px;color:#800000">：109.09.18(14:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">異常處理</div></td><td><div style="min-width:250px;color:#800000">：109.09.21(09:00)&nbsp;~&nbsp;109.09.25(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">超修單列印</div></td><td><div style="min-width:250px;color:#800000">：109.08.13(09:00)&nbsp;~&nbsp;109.09.17(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">棄選時間</div></td><td><div style="min-width:250px;color:#800000">：109.11.27(09:00)&nbsp;~&nbsp;109.12.04(17:00)</div></td></tr><tr><td><div style="text-align:right;color:#800000">選課確認</div></td><td><div style="min-width:250px;color:#800000">：109.09.21(09:00)&nbsp;~&nbsp;109.10.05(17:00)</div></td></tr><!--newsend-->      
+            </tbody></table>
+            </div>
+		</td></tr>
+        </tbody></table>
+	</div></td>
+</tr>
+
+
+	
+</tbody></table>
+</div>
+
+
+
+</body></html>
