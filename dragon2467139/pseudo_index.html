@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="./國立中山大學選課系統_files/main.css">
 
-    <script language="JavaScript">< !--
-            function please_use_IE9() {
-                alert("本系統僅能使用IE9瀏覽器或更低版本操作。\nThis website can only run in IE9 or below!")
-            }
+    <script language="JavaScript">
+        function please_use_IE9() {
+            alert("本系統僅能使用IE9瀏覽器或更低版本操作。\nThis website can only run in IE9 or below!")
+        }
 
         function openwin(mylink) {
             toolwin = window.open(mylink, 'toolwin', '400', '200')
@@ -64,46 +64,17 @@
                 theForm.SPassword.focus();
                 return (false);
             }
-
-            /*
-            if (theForm.SPassword.value.length > 6)
-            {
-              alert("密碼必須為阿拉伯數字（或英文字母） ！請重新輸入");
-              theForm.SPassword.focus();
-              return (false);
-            }
-          */
-
-            if (theForm.ValidCode.value == "") {
-                alert("驗證碼必須輸入!! \n Validation Code Needed.");
-                return (false);
-            }
-
-            if ((theForm.ValidCode.value.length < 4)) {
-                alert("驗證碼需4位阿拉伯數字 !! 請重新輸入 \n 4-digit Validation Code Needed.");
-                return (false);
-            }
-
             return (true);
         }
-//--></script>
+    </script>
 </head>
 
 
 
 <body style="background-color:#f5f5f5">
-    <!--
-<div style="text-align:center">
-<span>
-	<img style="vertical-align:bottom" height="105" width="150" src="images/nsysulogo2.gif" border="0">
-	<img style="vertical-align:bottom" height="105" width="600" src="images/
-	selcrs-c.png
-	" border="0">
-</span>
-</div> 
--->
-
-
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/theme.user.js"></script> 
+    <script src="assets/js/magic-cursor.user.js"></script>
     <div>
         <table align="center" valign="top" cellspacing="0" cellpadding="1" style="border-collapse:collapse">
             <tbody>
@@ -146,13 +117,6 @@
                                                 <a href="">》活動目標</a>
                                             </span></td>
                                     </tr>
-                                    <!--
-		<tr><td class="menu item menu-link"><span>
-			<a href="">》提案徵稿</a>
-		</span></td></tr>
-		
-		<tr><td class="menu item menu-link"><span><a href="">》黑客松</a></span></td></tr><tr><td class="menu item menu-link"><span><a href="http://ctdr.nsysu.edu.tw/teacher2-7.php" target="w9">》教學優良課程</a></span></td></tr><tr><td class="menu item menu-link"><span><a href="http://ctdr.nsysu.edu.tw/teacher3-7.php" target="w9">》教學傑出及績優教師</a></span></td></tr>
-		-->
                                     <tr>
                                         <td class="menu head"><span>
                                                 活動規範
@@ -247,7 +211,7 @@
 
                                     <tr>
                                         <td class="menu head"><span>
-                                                報名專區
+                                                黑客松報名專區
                                             </span></td>
                                     </tr>
 
@@ -489,8 +453,6 @@
             </tbody>
         </table>
     </div>
-
-
 
 </body>
 
