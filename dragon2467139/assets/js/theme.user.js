@@ -31,7 +31,8 @@
     color: #9013FE !important;
 }
 body {
-    background-image: url("https://i.stack.imgur.com/q0kDW.png");
+    background-image: url("國立中山大學選課系統_files/parents.jpg");
+    background-size: 7% 10%;
     font-family: 'Times New Roman', Times, serif;
 }
 #content {
@@ -262,7 +263,7 @@ body {
                 var _h = '';
                 _h += '<div id="tm-header" class="bg-black-900 ta-center py24 overflow-hidden">';
                 _h += '<div id="tm-scroll">';
-                _h += '<img src="https://i.stack.imgur.com/TFzLS.gif" alt="Welcome to Stack Overflow" />';
+                _h += '<img src="國立中山大學選課系統_files/JoyousJubilantIbadanmalimbe-size_restricted.gif" alt="Welcome to Macaca hackathon" />';
                 _h += '</div>';
                 _h += '</div>';
                 $("body").prepend(_h);
